@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Suite | Dina Shakir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #722F37;
+            --neutral-bg: #FDFBFA;
+            --neutral-accent: #EAE3DB;
+            --text-main: #1A1A1A;
+            --text-muted: #5A5A5A;
+        }
+
+        body {
+            background-color: var(--neutral-bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn-burgundy {
+            background-color: var(--burgundy);
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-burgundy:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .product-card {
+            transition: all 0.5s ease;
+        }
+
+        .product-image-container {
+            overflow: hidden;
+            background-color: var(--neutral-accent);
+        }
+
+        .product-image-container img {
+            transition: transform 0.8s ease;
+        }
+
+        .product-card:hover .product-image-container img {
+            transform: scale(1.03);
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom underline effect */
+        .editorial-link {
+            position: relative;
+            text-decoration: none;
+        }
+        .editorial-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--burgundy);
+            transition: width 0.3s ease;
+        }
+        .editorial-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#722F37] selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="py-10 px-6 md:px-12 flex justify-between items-center">
+        <div class="serif text-2xl tracking-tight font-medium">Dina Shakir</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light">
+            <a href="#" class="editorial-link">Journal</a>
+            <a href="#" class="editorial-link">About</a>
+            <a href="#" class="editorial-link">Suite</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-4xl mx-auto text-center px-6 pt-16 pb-24 fade-in">
+        <h1 class="serif text-5xl md:text-7xl mb-8 font-light italic tracking-tight">The Digital Suite</h1>
+        <p class="text-lg md:text-xl text-stone-500 font-light leading-relaxed max-w-2xl mx-auto">
+            A curated collection of digital tools designed to help women build clarity, structure, and freedom in their business. No noise, just foundations.
+        </p>
+    </header>
+
+    <!-- Product Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+            
+            <!-- Product 1: Freedom Offer Formula -->
+            <article class="product-card group">
+                <div class="product-image-container aspect-[4/5] mb-8">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Freedom Offer Formula" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://via.placeholder.com/800x1000?text=Digital+Guide'">
+                </div>
+                <div class="space-y-4">
+                    <h2 class="serif text-3xl font-light">Freedom Offer Formula</h2>
+                    <p class="text-stone-500 font-light leading-relaxed">
+                        A comprehensive digital guide to help you package, price, and position a clear offer that resonates with your ideal audience.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+                        <span class="text-xl font-light">$37</span>
+                        <a href="/checkout/freedom-offer-formula.html"
+                         class="btn-burgundy px-8 py-3 text-sm uppercase tracking-widest inline-block">
+                          Buy Now
+                         </a>
+
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2: Freedom Engine -->
+            <article class="product-card group">
+                <div class="product-image-container aspect-[4/5] mb-8">
+                    <img src="https://images.unsplash.com/photo-1490197415175-074fd86b1fcc?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Freedom Engine" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://via.placeholder.com/800x1000?text=Digital+System'">
+                </div>
+                <div class="space-y-4">
+                    <h2 class="serif text-3xl font-light">Freedom Engine</h2>
+                    <p class="text-stone-500 font-light leading-relaxed">
+                        A structural framework for building scalable systems with absolute clarity, allowing your business to breathe and grow with ease.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+                        <span class="text-xl font-light">$37</span>
+                        <button class="btn-burgundy px-8 py-3 text-sm uppercase tracking-widest">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 3: Placeholder -->
+            <article class="product-card group">
+                <div class="product-image-container aspect-[4/5] mb-8 opacity-40">
+                    <div class="w-full h-full flex items-center justify-center italic text-stone-400 font-light px-12 text-center">
+                        Coming Soon to the Suite
+                    </div>
+                </div>
+                <div class="space-y-4 opacity-40">
+                    <h2 class="serif text-3xl font-light">Future Growth</h2>
+                    <p class="text-stone-500 font-light leading-relaxed">
+                        New tools are currently in curation to further support your journey toward a structured and free business life.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+                        <span class="text-xl font-light">—</span>
+                        <button disabled class="bg-stone-100 text-stone-400 px-8 py-3 text-sm uppercase tracking-widest cursor-not-allowed">
+                            Waitlist
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-100 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-stone-400 text-xs uppercase tracking-[0.2em] font-light">
+            <div class="mb-4 md:mb-0">&copy; 2024 Dina Shakir</div>
+            <div class="flex space-x-10">
+                <a href="#" class="hover:text-stone-800 transition-colors">Privacy</a>
+                <a href="#" class="hover:text-stone-800 transition-colors">Terms</a>
+                <a href="#" class="hover:text-stone-800 transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
